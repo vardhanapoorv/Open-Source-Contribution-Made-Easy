@@ -18,7 +18,7 @@ Check out this [issue](https://github.com/vardhanapoorv/Open-Source-Contribution
 ### Contributors live site - [Live](https://contributors-site.vardhanapoorv.now.sh/)
 
 For Beginners, before you wander around our repo to start creating PR, 
-read posts mentioned in this [Hacktober Fest details page] (https://hacktoberfest.digitalocean.com/details). 
+read posts mentioned in this [Hacktober Fest details page](https://hacktoberfest.digitalocean.com/details). 
 It will give you a gist of how to create PRs.
 
 For Everyone, Quality is more important the Quantity. Even though these projects are not real world use case projects, treat them like one. 
