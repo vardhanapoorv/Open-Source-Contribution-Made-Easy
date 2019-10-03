@@ -14,6 +14,10 @@ const GreekGods = [
     {
       "name": "Ares",
       "desc": "Ares is the Greek god of war. He is one of the Twelve Olympians, the son of Zeus and Hera. In Greek literature, he often represents the physical or violent and untamed aspect of war"
+    },
+    {
+      "name": "Aphrodite",
+      "desc": "Aphrodite is an ancient Greek goddess associated with love, beauty, pleasure, passion and procreation."
     }
   ];
 
