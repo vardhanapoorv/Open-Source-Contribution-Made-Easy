@@ -13,6 +13,10 @@ let greekGodsArray = [|
   {
     "name": "Ares",
     "desc": "Ares is the Greek god of war. He is one of the Twelve Olympians, the son of Zeus and Hera. In Greek literature, he often represents the physical or violent and untamed aspect of war"
+  },
+  {
+    "name": "Apollo",
+    "desc": "Olympian god of music, poetry, art, oracles, archery, plague, medicine, sun, light and knowledge."
   }
 |];
 
