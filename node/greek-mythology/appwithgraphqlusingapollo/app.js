@@ -13,10 +13,12 @@ const mongoose = require('mongoose');
 const express = require('express');
 const { ApolloServer } = require('apollo-server-express');
 
-const schema = require('./graphql/schema')
-const app = express()
-const port = 4000 || process.env.PORT
+const typeDefs = require('./graphql/typeDefs');
+const resolvers = require('./graphql/resolvers/greekgod');
+const models = require('./models')
 
+const app = express();
+const port = 4000 || process.env.PORT;
 
 
 mongoose.set('useUnifiedTopology', true);
@@ -25,11 +27,14 @@ mongoose.connect(
     `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASSWORD}@oss-contri-jmuc0.mongodb.net/${process.env.MONGO_DB}?retryWrites=true&w=majority`
     , { useNewUrlParser: true })
 
+
 const server = new ApolloServer({
-    schema,
+    typeDefs,
+    resolvers,
+    context: { models }
 })
 
-server.applyMiddleware({ app, cors: false })
+server.applyMiddleware({ app })
 
 
 app.listen({ port }, () => {
@@ -37,4 +42,3 @@ app.listen({ port }, () => {
 }).on('error', () => {
     console.log(error)
 })
-
