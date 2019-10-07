@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <div class="container" v-bind:style="{'padding-top': 15 + 'px'}">
-      <card v-for="(god, index) in gods" v-bind:god="god" v-bind:index="index" v-bind:key="index"></card>
+    <div class="container container-fluid" v-bind:style="{'padding-top': 15 + 'px'}">
+      <div class="row justify-content-start">
+        <card v-for="(god, index) in gods" v-bind:god="god" v-bind:index="index" v-bind:key="index"></card>
+      </div>
     </div>
   </div>
 </template>
