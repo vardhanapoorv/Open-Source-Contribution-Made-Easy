@@ -1,12 +1,12 @@
-const GreekGod = require('../../models/greekgod');
-
 module.exports = {
-    greekGods: async () => {
-        try {
-            const greekGods = await GreekGod.find()
-            return greekGods;
-        } catch (err) {
-            throw err;
-        }
+  Query: {
+    greekGods: async (root,_,{ models }) => {
+      try {
+        const greekGods = await models.GreekGod.find()
+        return greekGods;
+      } catch (err) {
+        throw err;
+      }
     }
+  },
 };
