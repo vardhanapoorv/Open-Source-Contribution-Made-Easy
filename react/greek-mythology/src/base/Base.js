@@ -11,9 +11,11 @@ import GreekGods from '../../public/greek-gods.json';
 function Base() {
   return (
     <div className="container" style={{paddingTop: 15}}>
-      {GreekGods.map((god, index) => {
-        return <Card key={index} god={god} />;
-      })}
+      <div className="columns is-multiline">
+        {GreekGods.map((god, index) => {
+          return <Card key={index} god={god} />;
+        })}
+      </div>
     </div>
   );
 }
