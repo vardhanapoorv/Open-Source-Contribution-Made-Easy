@@ -9,13 +9,15 @@ import React from "react";
 
 function Card(props) {
   return (
-          <div className="card" style={{width: "18rem"}}>
-            <div className="card-body">
-              <h5 className="card-title">{props.god.name}</h5>
-              <p className="card-text">{props.god.desc}</p>
-            </div>
-          </div>
-      );
+    <div className="column is-half-tablet is-one-third-desktop is-one-quarter-widescreen">
+      <div className="card">
+        <div className="card-content">
+          <h5 className="card-title">{props.god.name}</h5>
+          <p className="card-text">{props.god.desc}</p>
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default Card;

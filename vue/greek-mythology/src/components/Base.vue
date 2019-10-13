@@ -1,7 +1,9 @@
 <template>
   <div id="app">
-    <div class="container" v-bind:style="{'padding-top': 15 + 'px'}">
-      <card v-for="(god, index) in gods" v-bind:god="god" v-bind:index="index" v-bind:key="index"></card>
+    <div class="container container-fluid gods-container">
+      <div class="row justify-content-start">
+        <card v-for="(god, index) in gods" :god="god" :index="index" :key="index"></card>
+      </div>
     </div>
   </div>
 </template>
@@ -12,9 +14,9 @@ import GreekGods from '../../public/greek-gods.json';
 
 export default {
   name: 'Base',
-  data: function() {
+  data() {
     return {
-    gods: GreekGods
+      gods: GreekGods
     }
   },
   components: {
@@ -23,3 +25,8 @@ export default {
 };
 </script>
 
+<style type="text/css">
+  .gods-container{
+    padding-top: 15px;
+  }
+</style>
