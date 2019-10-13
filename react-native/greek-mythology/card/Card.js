@@ -10,8 +10,8 @@ import { StyleSheet, Text, View } from 'react-native';
 
 function Card(props) {
   return (
-          <View style={styles.card}>
-              <Text>{props.god.name}</Text>
+          <View style={[styles.card, styles.border]}>
+              <Text style = {styles.godHeading}>{props.god.name}</Text>
               <Text>{props.god.desc}</Text>
           </View>
       );
@@ -19,7 +19,22 @@ function Card(props) {
 
 const styles = StyleSheet.create({
   card: {
-    padding: 10
+    padding: 10,
+    margin: 10,
+    backgroundColor: '#c5e5ed',
+    width: 300,
+    height: 250,
+    flexGrow: 1 
+  },
+  border:{
+    borderRadius: 3,
+    borderWidth: 1,
+    borderColor: 'black',
+  },
+  godHeading:{
+    fontSize: 16,
+    fontWeight: 'bold',
+    paddingBottom: 6
   }
 })
 
