@@ -15,7 +15,6 @@
       "github":"https://github.com/fersubair40"
     },
     {
-
       "name": "Benny Ogidan",
       "twitter": "https://twitter.com/BennyOgidan",
       "github": "https://github.com/benfluleck"
@@ -38,7 +37,9 @@
       "name": "Samuel Elbaz",
       "twitter":"https://twitter.com/bazz",
       "github":"https://github.com/raregamer"
-
+    },
+    {
+      "name": "Joseph Quevedo",
+      "github":"https://github.com/dewstend"
     }
-
   ]
