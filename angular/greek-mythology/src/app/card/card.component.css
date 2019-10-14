@@ -1,0 +1,7 @@
+.custom-card {
+  width: 20em;
+  padding: 10%;
+
+  height: 20em;
+  border: 1px solid grey;
+}

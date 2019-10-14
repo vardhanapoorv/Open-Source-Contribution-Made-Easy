@@ -1,0 +1,16 @@
+.central-gods {
+  display: flex;
+  justify-content: center;
+}
+
+.god-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.card-component {
+  padding: 5%;
+}

@@ -2,36 +2,32 @@
  * Created By : Lalit
  * Created On : 9/21/19
  */
-
+import {GodsModel} from './gods.model';
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {GodsModel} from './gods.model';
 
 @Component({
-  selector: 'base-component',
-  templateUrl: "./base.component.html"
+  selector: 'app-base-component',
+  templateUrl: './base.component.html',
+  styleUrls: [ './base.component.css' ]
 })
+
 export class BaseComponent implements OnInit {
 
-  godsUrl = 'assets/greek-gods.json';
-  godsList: GodsModel[] = [];
+  public godsList: GodsModel[] = [];
+  public godsUrl = 'assets/greek-gods.json';
 
-  constructor(private http: HttpClient) {
-  }
 
-  ngOnInit() {
+  constructor(
+    private http: HttpClient
+  ) {}
+
+  public ngOnInit(): void {
     this.loadGreekGods();
   }
 
-  loadGreekGods() {
-    this.http
-      .get(this.godsUrl)
-      .subscribe((payload: any[]) => {
-        for (let eachGod of payload) {
-          this.godsList.push(Object.assign(new GodsModel(), eachGod));
-        }
-      });
+  public loadGreekGods(): void {
+    this.http.get(this.godsUrl).subscribe((payload: any[]) =>
+      payload.forEach(eachGod => this.godsList.push(Object.assign(new GodsModel(), eachGod))));
   }
-
-
 }
