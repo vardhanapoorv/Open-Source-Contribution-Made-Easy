@@ -13,9 +13,11 @@ function Base() {
   return (
     <View>
       <View style={styles.heading}><Text>Greek Mythology</Text></View>
-      {GreekGods.map((god, index) => {
-        return <Card key={index} god={god} />;
-      })}
+      <View style={styles.flexContainer}>
+        {GreekGods.map((god, index) => {
+          return <Card key={index} god={god} />;
+        })}
+      </View>
     </View>
   );
 }
@@ -25,7 +27,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     paddingTop: 40
+  },
+  flexContainer: {
+    display: 'flex',
+    flexWrap: "wrap",
+    justifyContent: "center",
+    flexDirection: "row"
   }
+
 }); 
 
 export default Base;
