@@ -1,10 +1,12 @@
 [
   {
     "name": "Zeus",
-    "desc": "Zeus is the sky and thunder god in ancient Greek religion, who rules as king of the gods of Mount Olympus"
+    "desc": "Zeus is the sky and thunder god in ancient Greek religion, who rules as king of the gods of Mount Olympus",
+    "link": "https://en.wikipedia.org/wiki/Zeus"
   },
   {
     "name": "Ares",
-    "desc": "Ares is the Greek god of war. He is one of the Twelve Olympians, the son of Zeus and Hera. In Greek literature, he often represents the physical or violent and untamed aspect of war"
+    "desc": "Ares is the Greek god of war. He is one of the Twelve Olympians, the son of Zeus and Hera. In Greek literature, he often represents the physical or violent and untamed aspect of war",
+    "link": "https://en.wikipedia.org/wiki/Ares"
   }
 ]

@@ -9,7 +9,7 @@ import {GodsModel} from './gods.model';
 
 @Component({
   selector: 'base-component',
-  templateUrl: "./base.component.html"
+  templateUrl: './base.component.html'
 })
 export class BaseComponent implements OnInit {
 
@@ -26,9 +26,9 @@ export class BaseComponent implements OnInit {
   loadGreekGods() {
     this.http
       .get(this.godsUrl)
-      .subscribe((payload: any[]) => {
-        for (let eachGod of payload) {
-          this.godsList.push(Object.assign(new GodsModel(), eachGod));
+      .subscribe((payload: GodsModel[]) => {
+        for (const eachGod of payload) {
+          this.godsList.push(eachGod);
         }
       });
   }
