@@ -6,6 +6,7 @@
 export class GodsModel {
   name: string;
   desc: string;
+  link?: string;
 
   constructor() {
   }
